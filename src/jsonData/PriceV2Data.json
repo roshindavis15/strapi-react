@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "planClass": "",
+        "plan": "Basic",
+        "planInfo": "Low cost & affordable services to get you started very soon.",
+        "planPrice": "Free",
+        "priceType": "",
+        "list1": "Increase traffic 130%",
+        "list2": "Organic traffic 215%",
+        "list3": "10 Free Optimization",
+        "icon1": "fa-solid fa-check-circle",
+        "icon2": "fa-solid fa-check-circle",
+        "icon3": "fa-solid fa-times-circle",
+        "btnLink": "contact-us",
+        "btnText": "Select Plan",
+        "btnClass": "btn-dark"
+    },
+    {
+        "id": 2,
+        "planClass": "active",
+        "plan": "Premium",
+        "planInfo": "Increased processing power with multiple sites, storage.",
+        "planPrice": 29,
+        "priceType": "/ Monthly",
+        "list1": "1,300 Keywords",
+        "list2": "SEO Optimized",
+        "list3": "Live Support",
+        "icon1": "fa-solid fa-check-circle",
+        "icon2": "fa-solid fa-check-circle",
+        "icon3": "fa-solid fa-times-circle",
+        "btnLink": "contact-us",
+        "btnText": "Select Plan",
+        "btnClass": "btn-light"
+    },
+    {
+        "id": 3,
+        "planClass": "",
+        "plan": "Advanced",
+        "planInfo": "Target is processing power with multiple sites, storage.",
+        "planPrice": 58,
+        "priceType": "/ Monthly",
+        "list1": "Increase traffic 130%",
+        "list2": "BackLink analysis",
+        "list3": "10 Free Optimization",
+        "icon1": "fa-solid fa-check-circle",
+        "icon2": "fa-solid fa-check-circle",
+        "icon3": "fa-solid fa-times-circle",
+        "btnLink": "contact-us",
+        "btnText": "Select Plan",
+        "btnClass": "btn-dark"
+    }
+]

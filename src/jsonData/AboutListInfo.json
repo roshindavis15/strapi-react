@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "Design",
+        "icon": "fa-solid fa-angle-right"
+    },
+    {
+        "id": 2,
+        "title": "Digital Solution",
+        "icon": "fa-solid fa-angle-right"
+    },
+    {
+        "id": 3,
+        "title": "Strategy",
+        "icon": "fa-solid fa-angle-right"
+    },
+    {
+        "id": 4,
+        "title": "Branding",
+        "icon": "fa-solid fa-angle-right"
+    }
+]

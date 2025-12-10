@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "dataParent": "faqAccordion",
+        "accordionId": "headingOne",
+        "collapsedClass": "",
+        "dataTarget": "#collapseOne",
+        "ariaExpanded": "true",
+        "ariaControls": "collapseOne",
+        "title": "Where can I get software help?",
+        "text": "Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.",
+        "collapseShow": "show"
+    },
+    {
+        "id": 2,
+        "dataParent": "faqAccordion",
+        "accordionId": "headingTwo",
+        "collapsedClass": "collapsed",
+        "dataTarget": "#collapseTwo",
+        "ariaExpanded": "false",
+        "ariaControls": "collapseTwo",
+        "title": "How much does data software costs?",
+        "text": "Cannings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week.",
+        "collapseShow": ""
+    },
+    {
+        "id": 3,
+        "dataParent": "faqAccordion",
+        "accordionId": "headingThree",
+        "collapsedClass": "collapsed",
+        "dataTarget": "#collapseThree",
+        "ariaExpanded": "false",
+        "ariaControls": "collapseThree",
+        "title": "What kind of data is needed for software?",
+        "text": "Tannings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week.",
+        "collapseShow": "show"
+    }
+]

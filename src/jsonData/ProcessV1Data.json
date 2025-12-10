@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "icon": "flaticon-cyber-security",
+        "number": "01",
+        "title": "Date Exchange"
+    },
+    {
+        "id": 2,
+        "icon": "flaticon-paper",
+        "number": "02",
+        "title": "flaticon-paper"
+    },
+    {
+        "id": 3,
+        "icon": "flaticon-start-up",
+        "number": "03",
+        "title": "Workflow"
+    },
+    {
+        "id": 4,
+        "icon": "flaticon-support-1",
+        "number": "04",
+        "title": "Business Digital"
+    }
+]

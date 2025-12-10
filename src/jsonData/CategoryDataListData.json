@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "category": "national",
+        "postLink": "/blog-with-sidebar#",
+        "post": 69
+    },
+    {
+        "id": 2,
+        "category": "International",
+        "postLink": "/blog-with-sidebar#",
+        "post": 25
+    },
+    {
+        "id": 3,
+        "category": "sports",
+        "postLink": "/blog-with-sidebar#",
+        "post": 18
+    },
+    {
+        "id": 4,
+        "category": "magazine",
+        "postLink": "/blog-with-sidebar#",
+        "post": 37
+    },
+    {
+        "id": 5,
+        "category": "health",
+        "postLink": "/blog-with-sidebar#",
+        "post": 12
+    }
+]

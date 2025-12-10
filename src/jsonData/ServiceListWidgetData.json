@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "listTitle": "Advanced online appointment",
+        "listLink": "services-details",
+        "listIcon": "fa-solid fa-angle-right"
+    },
+    {
+        "id": 2,
+        "listTitle": "Easy team management",
+        "listLink": "services-details",
+        "listIcon": "fa-solid fa-angle-right"
+    },
+    {
+        "id": 3,
+        "listTitle": "Multiple user & management",
+        "listLink": "services-details",
+        "listIcon": "fa-solid fa-angle-right"
+    },
+    {
+        "id": 4,
+        "listTitle": "Editable & highly customizable",
+        "listLink": "services-details",
+        "listIcon": "fa-solid fa-angle-right"
+    },
+    {
+        "id": 5,
+        "listTitle": "SuperFast cloud data saved",
+        "listLink": "services-details",
+        "listIcon": "fa-solid fa-angle-right"
+    }
+]

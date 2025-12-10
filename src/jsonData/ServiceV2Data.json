@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "thumb": "4.png",
+        "text": "Comparison new entertain melancholy son themselves.",
+        "serviceName": "Content Marketing",
+        "tag": "Marketing",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 2,
+        "thumb": "5.png",
+        "text": "Comparison new entertain melancholy son themselves.",
+        "serviceName": "Social Marketing",
+        "tag": "Media",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 3,
+        "thumb": "6.png",
+        "text": "Comparison new entertain melancholy son themselves.",
+        "serviceName": "App Development",
+        "tag": "Software",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 4,
+        "thumb": "7.png",
+        "text": "Comparison new entertain melancholy son themselves.",
+        "serviceName": "SEO Optimization",
+        "tag": "Optimized",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 5,
+        "thumb": "8.png",
+        "text": "Comparison new entertain melancholy son themselves.",
+        "serviceName": "PPC Advertising",
+        "tag": "Advertisement",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    },
+    {
+        "id": 6,
+        "thumb": "9.png",
+        "text": "Comparison new entertain melancholy son themselves.",
+        "serviceName": "Digital Marketing",
+        "tag": "Agency",
+        "serviceLink": "services-details",
+        "icon": "fa-solid fa-arrow-right",
+        "shape": "15.webp"
+    }
+]

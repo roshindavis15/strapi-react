@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "icon1": "1.png",
+        "icon1Dark": "target.png",
+        "thumb": "1-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
+        "title": "Marketing Strategy",
+        "serviceLink": "services-details"
+    },
+    {
+        "id": 2,
+        "icon1": "2.png",
+        "icon1Dark": "envelope.png",
+        "thumb": "2-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
+        "title": "Enterprise Consulting",
+        "serviceLink": "services-details"
+    },
+    {
+        "id": 3,
+        "icon1": "3.png",
+        "icon1Dark": "analytics.png",
+        "thumb": "3-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
+        "title": "Growth Tracking",
+        "serviceLink": "services-details"
+    },
+    {
+        "id": 4,
+        "icon1": "4.png",
+        "icon1Dark": "4.png",
+        "thumb": "4-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
+        "title": "SEO Optimization",
+        "serviceLink": "services-details"
+    },
+    {
+        "id": 5,
+        "icon1": "5.png",
+        "icon1Dark": "5.png",
+        "thumb": "5-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
+        "title": "PPC Advertising",
+        "serviceLink": "services-details"
+    },
+    {
+        "id": 6,
+        "icon1": "6.png",
+        "icon1Dark": "6.png",
+        "thumb": "6-full.jpg",
+        "icon2": "fas fa-long-arrow-right",
+        "text": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
+        "title": "Digital Marketing",
+        "serviceLink": "services-details"
+    }
+]
