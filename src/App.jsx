@@ -1,5 +1,5 @@
 import 'react-toastify/dist/ReactToastify.css';
-import 'react-modal-video/css/modal-video.css';
+// import 'react-modal-video/css/modal-video.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import '@fortawesome/fontawesome-free/css/all.css';

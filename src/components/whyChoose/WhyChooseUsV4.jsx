@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ModalVideo from 'react-modal-video';
+// import ModalVideo from 'react-modal-video';
 import { HashLink as Link } from 'react-router-hash-link'
 import WhyChooseUsV4Data from '../../jsonData/WhyChooseUsV4Data.json'
 import SingleChooseV3 from './SingleChooseV4';
