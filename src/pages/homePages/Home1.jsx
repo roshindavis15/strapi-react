@@ -47,7 +47,7 @@ axios.get("https://strapi-new-production-d256.up.railway.app/api/home", {
       });
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  // if (loading) return <p>Loading...</p>;
   if (!homeData) return <p>No data found</p>;
 
   return (
