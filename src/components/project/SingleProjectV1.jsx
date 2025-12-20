@@ -1,25 +1,41 @@
-import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import React from "react";
 
-const SingleProjectV1 = ({ project }) => {
-    const { id, thumb, projectLink, subTitle, title, shape } = project;
+const SingleProjectV1 = ({ product }) => {
+  const {
+    Title,
+    Subtitle,
+    slug,
+    Price,
+    Badge,
+    Image,
+  } = product;
 
-    return (
-        <>
-            <div className="swiper-slide">
-                <div className="project-style-one">
-                    <img src={`/img/portfolio/${thumb}`} alt="Thumb" />
-                    <div className="overlay">
-                        <span>{subTitle}</span>
-                        <h4><Link to={`/${projectLink}/${id}#`}>{title}</Link></h4>
-                    </div>
-                    <div className="shape">
-                        <img src={`/img/shape/${shape}`} alt="shape" />
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <div className="">
+      {/* IMAGE */}
+      <img
+        src={`https://strapi-new-production-d256.up.railway.app${Image?.url}`}
+        alt={Title}
+        className="img-fluid"
+      />
+
+      {/* BADGE */}
+      {Badge && <span className="badge">{Badge}</span>}
+
+      {/* OVERLAY CONTENT */}
+      <div className="overlay">
+        <span>{Subtitle}</span>
+
+        <h4>
+          <a href={`/product/${slug}`}>{Title}</a>
+        </h4>
+
+        <div className="price">
+          <strong>₹{Price}</strong>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SingleProjectV1;

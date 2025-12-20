@@ -10,27 +10,16 @@ const MainMenu = ({ isOpen, closeMenu, toggleSubMenu, toggleMegaMenu }) => {
                     <i className="fa-solid fa-times"></i>
                 </button>
                 <ul className="nav navbar-nav navbar-center">
-                    <li className="dropdown">
-                        <Link to={void (0)} className="dropdown-toggle active" onClick={toggleSubMenu}>Home</Link>
-                        <ul className="dropdown-menu">
-                            <li><Link to="/#">Creative Agency</Link></li>
-                            <li><Link to="/home-2#">Digital Agency</Link></li>
-                            <li><Link to="/home-3#">Digital Marketing</Link></li>
-                            <li><Link to="/business#">Consulting Business</Link></li>
-                            <li className="dropdown">
-                                <Link to={void (0)} className="dropdown-toggle" onClick={toggleSubMenu}>Home Dark Version</Link>
-                                <ul className="dropdown-menu">
-                                    <li><Link to="/home-1-dark#">Creative Agency</Link></li>
-                                    <li><Link to="/home-2-dark#">Digital Agency</Link></li>
-                                    <li><Link to="/home-3-dark#">Digital Marketing</Link></li>
-                                    <li><Link to="/business-dark#">Consulting Business</Link></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="dropdown megamenu-fw">
-                        <Link to={void (0)} className="dropdown-toggle" onClick={toggleSubMenu}>MegaMenu</Link>
-                        <ul className="dropdown-menu megamenu-content">
+<li>
+  <Link to="/" className="active">Home</Link>
+</li>
+
+                    <li>
+                       <li>
+  <Link to="/about-us" className="active">About Us</Link>
+</li>
+
+                        {/* <ul className="dropdown-menu megamenu-content">
                             <li>
                                 <div className="row">
                                     <div className="col-menu col-lg-3">
@@ -79,29 +68,30 @@ const MainMenu = ({ isOpen, closeMenu, toggleSubMenu, toggleMegaMenu }) => {
                                     </div>
                                 </div>
                             </li>
-                        </ul>
+                        </ul> */}
                     </li>
                     <li className="dropdown">
-                        <Link to={void (0)} className="dropdown-toggle" onClick={toggleSubMenu}>Services</Link>
-                        <ul className="dropdown-menu">
+                        <Link to="/service" className="Active" >Services</Link>
+                        {/* <ul className="dropdown-menu">
                             <li><Link to="/services-details#">Marketing Strategy</Link></li>
                             <li><Link to="/services-details#">Enterprise Consulting</Link></li>
                             <li><Link to="/services-details#">Growth Tracking</Link></li>
                             <li><Link to="/services-details#">Social Media Marketing</Link></li>
                             <li><Link to="/services-details#">Keyword Research</Link></li>
-                        </ul>
+                        </ul> */}
                     </li>
                     <li className="dropdown">
-                        <Link to={void (0)} className="dropdown-toggle" onClick={toggleSubMenu}>Blog</Link>
-                        <ul className="dropdown-menu">
+                        <Link to="/products" className="Active">Products</Link>
+                        {/* <ul className="dropdown-menu">
                             <li><Link to="/blog-standard#">Blog Standard</Link></li>
                             <li><Link to="/blog-with-sidebar#">Blog With Sidebar</Link></li>
                             <li><Link to="/blog-2-column#">Blog Grid Two Column</Link></li>
                             <li><Link to="/blog-3-column#">Blog Grid Three Column</Link></li>
                             <li><Link to="/blog-single#">Blog Single</Link></li>
                             <li><Link to="/blog-single-sidebar#">Blog Single With Sidebar</Link></li>
-                        </ul>
+                        </ul> */}
                     </li>
+                      <li><Link to="/news">News</Link></li>
                     <li><Link to="/contact-us#">contact</Link></li>
                 </ul>
             </div>

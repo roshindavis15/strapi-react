@@ -1,24 +1,28 @@
-import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link'
+import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 const SingleTeamV2 = ({ team }) => {
-    const { id, thumb, name, profession, memberLink } = team
+  const { id, Name, Profession, slug, Photo } = team;
 
-    return (
-        <>
-            <div className="team-style-two">
-                <div className="thumb">
-                    <img src={`img/team/${thumb}`} alt="Image Not Found" />
-                    <div className="team-info">
-                        <div className="content">
-                            <h4><Link to={`/${memberLink}/${id}#`}>{name}</Link></h4>
-                            <span>{profession}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <div className="team-style-two">
+      <div className="thumb">
+        <img
+          src={`https://strapi-new-production-d256.up.railway.app${Photo?.url}`}
+          alt={name}
+        />
+
+        <div className="team-info">
+          <div className="content">
+            <h4>
+              <Link to={`/team/${slug}#`}>{Name}</Link>
+            </h4>
+            <span>{Profession}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SingleTeamV2;

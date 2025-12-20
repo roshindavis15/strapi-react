@@ -1,33 +1,67 @@
-import React from 'react';
-import ServiceV1Data from '../../jsonData/ServiceV1Data.json'
-import SingleServicesV1 from './SingleServicesV1';
+import React from "react";
+import SingleServicesV1 from "./SingleServicesV1";
 
-const ServicesV1 = () => {
-    return (
-        <>
-            <div className="default-padding box-layout overflow-hidden bottom-less services-style-one-area bg-gray bg-cover" style={{ backgroundImage: "url(/img/shape/banner-2.jpg)" }}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8 offset-lg-2">
-                            <div className="site-heading text-center">
-                                <h5 className="sub-title">Service were offering</h5>
-                                <h2 className="title">Turn Information <br /> Into Actionable Insights</h2>
-                            </div>
-                        </div>
-                    </div>
+const ServicesV1 = ({ services = [] }) => {
+  // Only active services
+  const activeServices = services.filter(item => item.isActive);
+  console.log("activeServices:",activeServices)
+
+  if (!activeServices.length) return null;
+
+  return (
+    <div className="container-fluid p-0">
+      <div
+        id="servicesCarousel"
+        className="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="2000"
+      >
+        {/* Slides */}
+        <div className="carousel-inner">
+          {activeServices.map((service, index) => {
+            const imageUrl = service.Icon?.url
+              ? `https://strapi-new-production-d256.up.railway.app${service.Icon.url}`
+              : "";
+
+            return (
+              <div
+                key={service.id}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+              >
+                <div
+                  className="services-carousel-slide"
+                  style={{
+                    backgroundImage: `url(${imageUrl})`,
+                  }}
+                >
+                  <SingleServicesV1 service={service} />
                 </div>
-                <div className="container">
-                    <div className="row">
-                        {ServiceV1Data.slice(0, 3).map(service =>
-                            <div className="col-xl-4 col-lg-6 col-md-6 mb-30" key={service.id}>
-                                <SingleServicesV1 service={service} />
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Controls */}
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#servicesCarousel"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" />
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#servicesCarousel"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" />
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default ServicesV1;

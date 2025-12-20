@@ -1,105 +1,90 @@
-import React, { useState } from 'react';
-import ProjectV1Data from '../../jsonData/ProjectV1Data.json'
-import SingleProjectV1 from './SingleProjectV1';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Keyboard } from 'swiper/modules';
-import { useRef } from 'react';
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard } from "swiper/modules";
 
-const ProjectV1 = () => {
+import "swiper/css";
+import SingleProjectV1 from "./SingleProjectV1";
 
-    const SlideRef = useRef()
+const ProjectV1 = ({ products = [] }) => {
+  const slideRef = useRef(null);
 
-    const handleNext = () => {
-        SlideRef.current.swiper.slideNext()
-    }
+  const handleNext = () => {
+    slideRef.current?.swiper.slideNext();
+  };
 
-    const handlePrev = () => {
-        SlideRef.current.swiper.slidePrev()
-    }
+  const handlePrev = () => {
+    slideRef.current?.swiper.slidePrev();
+  };
 
-    // eslint-disable-next-line no-unused-vars
-    const [activeSlide, setActiveSlide] = useState(1);
+  if (!products.length) return null;
 
-    const handleSlideChange = (index) => {
-        setActiveSlide(index);
-    };
-
-    return (
-        <>
-            <div className="project-style-one-area overflow-hidden default-padding-top bg-gray">
-                <div className="container">
-                    <div className="heading-left">
-                        <div className="row">
-                            <div className="col-xl-5 col-lg-6">
-                                <div className="content-left">
-                                    <h5 className="sub-title">Popular Projects</h5>
-                                    <h2 className="heading">Completed Projects</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="project-nav-box">
-                        <div className="project-swiper-nav">
-                            <div className="project-button-prev" onClick={handlePrev}></div>
-                            <div className="project-button-next" onClick={handleNext}></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="project-style-one-items">
-                    <div className="container-fill">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="project-center-stage-carousel swiper">
-                                    <div className="swiper-wrappers">
-                                        <Swiper
-                                            ref={SlideRef}
-                                            initialSlide={1} onSlideChange={handleSlideChange}
-                                            modules={[Keyboard]}
-                                            speed={700}
-                                            freeMode={true}
-                                            grabCursor={true}
-                                            centeredSlides={true}
-                                            pagination={{
-                                                el: ".swiper-pagination",
-                                                clickable: true,
-                                            }}
-                                            loop={true}
-                                            keyboard={{
-                                                enabled: true,
-                                            }}
-                                            breakpoints={{
-                                                991: {
-                                                    slidesPerView: 2,
-                                                    spaceBetween: 30,
-                                                    centeredSlides: false,
-                                                },
-                                                1200: {
-                                                    slidesPerView: 2.5,
-                                                    spaceBetween: 60,
-                                                },
-                                                1800: {
-                                                    slidesPerView: 2.8,
-                                                    spaceBetween: 80,
-                                                },
-                                            }}
-                                        >
-                                            {ProjectV1Data.map(project =>
-                                                <SwiperSlide key={project.id}>
-                                                    <SingleProjectV1 project={project} />
-                                                </SwiperSlide>
-                                            )}
-                                        </Swiper>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="project-style-one-area overflow-hidden default-padding-top bg-gray">
+      {/* HEADING */}
+      <div className="container">
+        <div className="heading-left">
+          <div className="row">
+            <div className="col-xl-5 col-lg-6">
+              <div className="content-left">
+                <h5 className="sub-title">Featured Products</h5>
+                <h2 className="heading">Popular Items</h2>
+              </div>
             </div>
-        </>
-    );
+          </div>
+        </div>
+
+        {/* NAV ICONS */}
+        <div className="project-nav-box">
+          <div className="project-swiper-nav">
+            <div
+              className="project-button-prev"
+              onClick={handlePrev}
+            ></div>
+            <div
+              className="project-button-next"
+              onClick={handleNext}
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      {/* SWIPER */}
+      <div className="project-style-one-items">
+        <div className="container-fill">
+          <Swiper
+            ref={slideRef}
+            modules={[Keyboard]}
+            speed={700}
+            loop={true}
+            grabCursor
+        
+            keyboard={{ enabled: true }}
+            breakpoints={{
+              991: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                centeredSlides: false,
+              },
+              1200: {
+                slidesPerView: 2.5,
+                spaceBetween: 60,
+              },
+              1800: {
+                slidesPerView: 3,
+                spaceBetween: 80,
+              },
+            }}
+          >
+            {products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <SingleProjectV1 product={product} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ProjectV1;

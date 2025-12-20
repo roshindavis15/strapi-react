@@ -30,6 +30,11 @@ import Blog2Column from './pages/blogPages/Blog2Column';
 import Blog3Column from './pages/blogPages/Blog3Column';
 import BlogSingle from './pages/blogPages/BlogSingle';
 import BlogSingleSidebar from './pages/blogPages/BlogSingleSidebar';
+import ServicesSection from './pages/innerPages/Service';
+import ServiceDetail from './pages/innerPages/ServiceDetail';
+import Products from './pages/productPages/Products';
+import ProductDetail from './pages/productPages/ProductsDetails';
+import News from './pages/newsPages/News';
 
 const Routers = () => {
     return (
@@ -70,6 +75,13 @@ const Routers = () => {
                 <Route path='/blog-single-sidebar/:id' element={<BlogSingleSidebar />}></Route>
                 <Route path='/blog-single-sidebar/' element={<Navigate to='/blog-single-sidebar/1' />}></Route>
                 <Route path='*' element={<Error404 />}></Route>
+                <Route path='/service' element={<ServicesSection />}></Route>
+             <Route path="/services/:slug" element={<ServiceDetail />} />
+
+                <Route path="/products" element={<Products />} />
+                <Route path="/products/:slug" element={<ProductDetail />} />
+                <Route path="/news" element={<News />} />
+
             </Routes>
         </>
     );
