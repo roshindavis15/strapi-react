@@ -1918,7 +1918,6 @@ button::after {
 	height: 150px;
 	width: 115%;
 	z-index: -1;
-	background-color: var(--dark);
 	-webkit-transition: all 0.25s ease-in-out;
 	transition: all 0.25s ease-in-out;
 	-webkit-transform: translateY(-45%) skew(25deg) scale(0);

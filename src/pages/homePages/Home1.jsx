@@ -8,6 +8,7 @@ import ProjectV1 from "../../components/project/ProjectV1";
 import TeamV1 from "../../components/team/TeamV2";
 import BlogV1 from "../../components/blog/BlogV1";
 import FooterV1 from "../../components/footer/FooterV1";
+import Preloader from "../../components/others/Preloader";
 
 const Home1 = () => {
   const [homeData, setHomeData] = useState(null);
@@ -48,7 +49,7 @@ axios.get("https://strapi-new-production-d256.up.railway.app/api/home", {
   }, []);
 
   // if (loading) return <p>Loading...</p>;
-  if (!homeData) return <p>No data found</p>;
+  if (!homeData) return  <Preloader/>
 
   return (
     <>

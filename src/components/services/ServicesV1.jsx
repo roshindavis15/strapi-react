@@ -9,7 +9,7 @@ const ServicesV1 = ({ services = [] }) => {
   if (!activeServices.length) return null;
 
   return (
-    <div className="container-fluid p-0">
+    <div className="container-fluid p-0 " style={{margin:"-24px"}} >
       <div
         id="servicesCarousel"
         className="carousel slide"

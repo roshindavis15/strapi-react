@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import HeaderV5 from "../../components/header/HeaderV5";
 import FooterV1 from "../../components/footer/FooterV1";
 import BreadCrumb from "../../components/breadCrumb/BreadCrumb";
+import Preloader from "../../components/others/Preloader";
 
 const ServicesSection = () => {
   const [services, setServices] = useState([]);
@@ -16,6 +17,7 @@ const ServicesSection = () => {
 
 const fetchServices = async () => {
   try {
+    setLoading(true)
     const res = await axios.get(
       "https://strapi-new-production-d256.up.railway.app/api/servicesses",
       {
@@ -33,8 +35,12 @@ const fetchServices = async () => {
     setServices(res.data.data);
     } catch (error) {
     console.error("Service API error:", error);
+  } finally{
+    setLoading(false)
   }
 };
+
+ if (loading) return <Preloader />;
 
 
   return (

@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import HeaderV5 from "../../components/header/HeaderV5";
 import BreadCrumb from "../../components/breadCrumb/BreadCrumb";
 import FooterV1 from "../../components/footer/FooterV1";
+import Preloader from "../../components/others/Preloader";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [pagination, setPagination] = useState({});
   const [page, setPage] = useState(1);
+  const [loading,setLoading]= useState(true);
 
   const PAGE_SIZE = 6;
 
@@ -17,7 +19,9 @@ const Products = () => {
   }, [page]);
 
   const fetchProducts = async (pageNumber) => {
-    const res = await axios.get("https://strapi-new-production-d256.up.railway.app/api/products", {
+    try {
+      setLoading(true)
+          const res = await axios.get("https://strapi-new-production-d256.up.railway.app/api/products", {
       params: {
         populate:{
             Image:true
@@ -32,10 +36,19 @@ const Products = () => {
         },
       },
     });
+    
+
 
     setProducts(res.data.data);
     setPagination(res.data.meta.pagination);
+  } catch(error){
+    console.error("api error:",error)
+  } finally{
+    setLoading(false)
+  }
+
   };
+  if(loading) return <Preloader/>
 
   return (
     <>
