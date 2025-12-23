@@ -3,11 +3,26 @@ import HeaderSidebarMenu from './HeaderSidebarMenu';
 import MainMenu from './MainMenu';
 import HeaderSearch from './HeaderSearch';
 import HeaderLogoV1 from './HeaderLogoV1';
+import { Link } from 'react-router-dom';
+import { getUser, isLoggedIn, logout } from '../../utils/auth';
+import LoginModal from '../auth/LoginModal';
+import AuthModal from '../auth/LoginModal';
 
 const HeaderV1 = ({ headerClass, logoColor = false }) => {
 
     // Sticky Menu 
     const [isSticky, setIsSticky] = useState(false);
+  const [showAuth, setShowAuth] = useState(false);
+    const [auth, setAuth] = useState(isLoggedIn());
+    const user = getUser();
+
+    const handleLogout = () => {
+  logout();
+  setAuth(false);
+  window.location.href = "/"; 
+};
+
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -95,7 +110,29 @@ const HeaderV1 = ({ headerClass, logoColor = false }) => {
                     <div className="container-fill d-flex justify-content-between align-items-center">
                         <HeaderLogoV1 logoColor={logoColor} openMenu={openMenu} />
                         <MainMenu isOpen={isOpen} closeMenu={closeMenu} toggleSubMenu={toggleSubMenu} toggleMegaMenu={toggleMegaMenu} />
-                        <HeaderSidebarMenu removeClasses={removeClasses} isSidebarOpen={isSidebarOpen} addClasses={addClasses} searchOpen={searchOpen} />
+                        {/* <HeaderSidebarMenu removeClasses={removeClasses} isSidebarOpen={isSidebarOpen} addClasses={addClasses} searchOpen={searchOpen} /> */}
+<ul className="header-auth">
+  {!auth ? (
+    <li>
+<button onClick={() => setShowAuth(true)} className='bg-dark px-3 py-2'>Login</button>
+    </li>
+  ) : (
+    <li>
+     
+      <button onClick={handleLogout} className="logout-btn bg-dark px-3 py-2 ">
+        Logout
+      </button>
+    </li>
+  )}
+</ul>
+
+<AuthModal
+  isOpen={showAuth}
+  onClose={() => setShowAuth(false)}
+  onAuthSuccess={() => window.location.reload()}
+/>
+
+
                     </div>
                     <div className={`overlay-screen ${isOpen ? "opened" : ""}`}></div>
                 </nav>
