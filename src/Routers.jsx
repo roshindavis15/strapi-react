@@ -35,6 +35,7 @@ import ServiceDetail from './pages/innerPages/ServiceDetail';
 import Products from './pages/productPages/Products';
 import ProductDetail from './pages/productPages/ProductsDetails';
 import News from './pages/newsPages/News';
+import Profile from './pages/profile/Profile';
 
 const Routers = () => {
     return (
@@ -81,6 +82,8 @@ const Routers = () => {
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/:slug" element={<ProductDetail />} />
                 <Route path="/news" element={<News />} />
+                <Route path="/profile" element={<Profile />} />
+                
 
             </Routes>
         </>

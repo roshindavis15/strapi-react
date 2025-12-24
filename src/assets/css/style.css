@@ -11040,3 +11040,49 @@ color: #000;
   color: black;
 }
 
+/* profile styles */
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-icon {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #000;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  border-radius: 6px;
+  min-width: 150px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  z-index: 999;
+}
+
+.profile-dropdown li {
+  list-style: none;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background: #f5f5f5;
+}

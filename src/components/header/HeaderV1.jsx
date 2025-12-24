@@ -14,6 +14,8 @@ const HeaderV1 = ({ headerClass, logoColor = false }) => {
     const [isSticky, setIsSticky] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
     const [auth, setAuth] = useState(isLoggedIn());
+    const [profileOpen, setProfileOpen] = useState(false);
+
     const user = getUser();
 
     const handleLogout = () => {
@@ -112,18 +114,47 @@ const HeaderV1 = ({ headerClass, logoColor = false }) => {
                         <MainMenu isOpen={isOpen} closeMenu={closeMenu} toggleSubMenu={toggleSubMenu} toggleMegaMenu={toggleMegaMenu} />
                         {/* <HeaderSidebarMenu removeClasses={removeClasses} isSidebarOpen={isSidebarOpen} addClasses={addClasses} searchOpen={searchOpen} /> */}
 <ul className="header-auth">
-  {!auth ? (
-    <li>
-<button onClick={() => setShowAuth(true)} className='bg-dark px-3 py-2'>Login</button>
-    </li>
-  ) : (
-    <li>
-     
-      <button onClick={handleLogout} className="logout-btn bg-dark px-3 py-2 ">
-        Logout
-      </button>
-    </li>
-  )}
+{!auth ? (
+  <li>
+    <button
+      onClick={() => setShowAuth(true)}
+      className="bg-dark px-3 py-2"
+    >
+      Login
+    </button>
+  </li>
+) : (
+  <li className="profile-wrapper">
+    <button
+      className="bg-dark"
+      onClick={() => setProfileOpen(!profileOpen)}
+    >
+      <i className="fas fa-user-circle"></i>
+    </button>
+
+    {profileOpen && (
+      <ul className="profile-dropdown">
+        <li>
+          <Link
+            to="/profile"
+            onClick={() => setProfileOpen(false)}
+          >
+            Profile
+          </Link>
+        </li>
+        <li>
+          <button
+            onClick={handleLogout}
+            className=""
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    )}
+  </li>
+)}
+
 </ul>
 
 <AuthModal
