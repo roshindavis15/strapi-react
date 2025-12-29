@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import HeaderV5 from "../../components/header/HeaderV5";
 import FooterV1 from "../../components/footer/FooterV1";
+import Preloader from "../../components/others/Preloader";
+import HeaderV1 from "../../components/header/HeaderV1";
 
 const ServiceDetail = () => {
   const { slug } = useParams();
@@ -17,7 +19,7 @@ const ServiceDetail = () => {
   const fetchService = async () => {
     try {
       const res = await axios.get(
-        "https://strapi-new-production-d256.up.railway.app/api/servicesses",
+        "https://strapi-production-77e6.up.railway.app/api/servicesses",
         {
           params: {
             "filters[slug][$eq]": slug,
@@ -46,12 +48,12 @@ const ServiceDetail = () => {
     }
   };
 
-  if (loading) return <p style={{ textAlign: "center" }}>Loading...</p>;
+  if (loading) return <Preloader/>
   if (!service) return null;
 
   return (
     <>
-      <HeaderV5 />
+      <HeaderV1 />
 
       <section className="service-detail-area">
         <div className="container">
@@ -61,7 +63,7 @@ const ServiceDetail = () => {
             <div className="service-detail-image">
               {service.Image && (
                 <img
-                  src={`https://strapi-new-production-d256.up.railway.app${service.Image.url}`}
+                  src={`https://strapi-production-77e6.up.railway.app${service.Image.url}`}
                   alt={service.Title}
                 />
               )}
@@ -69,7 +71,7 @@ const ServiceDetail = () => {
               {service.Icon && (
                 <div className="service-detail-icon">
                   <img
-                    src={`https://strapi-new-production-d256.up.railway.app${service.Icon.url}`}
+                    src={`https://strapi-production-77e6.up.railway.app${service.Icon.url}`}
                     alt="icon"
                   />
                 </div>

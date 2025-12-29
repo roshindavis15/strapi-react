@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import HeaderV5 from "../../components/header/HeaderV5";
 import FooterV1 from "../../components/footer/FooterV1";
+import Preloader from "../../components/others/Preloader";
+import HeaderV1 from "../../components/header/HeaderV1";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -10,7 +12,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     axios
-      .get("https://strapi-new-production-d256.up.railway.app/api/products", {
+      .get("https://strapi-production-77e6.up.railway.app/api/products", {
         params: {
           filters: { slug: { $eq: slug } },
           populate: { Image: true },
@@ -22,11 +24,11 @@ const ProductDetail = () => {
       .catch(console.error);
   }, [slug]);
 
-  if (!product) return <p className="loading">Loading...</p>;
+  if (!product) return <Preloader/>
 
   return (
     <>
-      <HeaderV5 />
+      <HeaderV1 />
 
       <section className="product-detail-area">
         <div className="container">
@@ -39,7 +41,7 @@ const ProductDetail = () => {
               )}
 
               <img
-                src={`https://strapi-new-production-d256.up.railway.app${product.Image?.url}`}
+                src={`https://strapi-production-77e6.up.railway.app${product.Image?.url}`}
                 alt={product.Title}
               />
             </div>

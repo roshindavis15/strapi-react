@@ -50,7 +50,7 @@ const AboutV1 = ({ mission }) => {
                 className="thumb bg-cover"
                 style={{
                   backgroundImage: backgroundImage?.url
-                    ? `url(https://strapi-new-production-d256.up.railway.app${backgroundImage.url})`
+                    ? `url( https://strapi-production-77e6.up.railway.app${backgroundImage.url})`
                     : "none",
                 }}
               >

@@ -20,7 +20,7 @@ const ServicesV1 = ({ services = [] }) => {
         <div className="carousel-inner">
           {activeServices.map((service, index) => {
             const imageUrl = service.Icon?.url
-              ? `https://strapi-new-production-d256.up.railway.app${service.Icon.url}`
+              ? ` https://strapi-production-77e6.up.railway.app${service.Icon.url}`
               : "";
 
             return (

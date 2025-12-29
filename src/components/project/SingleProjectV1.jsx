@@ -14,7 +14,7 @@ const SingleProjectV1 = ({ product }) => {
     <div className="">
       {/* IMAGE */}
       <img
-        src={`https://strapi-new-production-d256.up.railway.app${Image?.url}`}
+        src={` https://strapi-production-77e6.up.railway.app${Image?.url}`}
         alt={Title}
         className="img-fluid"
       />

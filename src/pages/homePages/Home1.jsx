@@ -15,7 +15,8 @@ const Home1 = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-axios.get("https://strapi-new-production-d256.up.railway.app/api/home", {
+axios.get(" https://strapi-production-77e6.up.railway.app/api/home", {
+  
   params: {
     populate: {
       mission: {

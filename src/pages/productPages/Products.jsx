@@ -5,6 +5,7 @@ import HeaderV5 from "../../components/header/HeaderV5";
 import BreadCrumb from "../../components/breadCrumb/BreadCrumb";
 import FooterV1 from "../../components/footer/FooterV1";
 import Preloader from "../../components/others/Preloader";
+import HeaderV1 from "../../components/header/HeaderV1";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ const Products = () => {
   const [page, setPage] = useState(1);
   const [loading,setLoading]= useState(true);
 
-  const PAGE_SIZE = 6;
+  const PAGE_SIZE = 3;
 
   useEffect(() => {
     fetchProducts(page);
@@ -21,7 +22,7 @@ const Products = () => {
   const fetchProducts = async (pageNumber) => {
     try {
       setLoading(true)
-          const res = await axios.get("https://strapi-new-production-d256.up.railway.app/api/products", {
+          const res = await axios.get("https://strapi-production-77e6.up.railway.app/api/products", {
       params: {
         populate:{
             Image:true
@@ -52,7 +53,7 @@ const Products = () => {
 
   return (
     <>
-    <HeaderV5 />
+   <HeaderV1 headerClass="dark" />
             <BreadCrumb breadCrumb="products" title1="Explore Our" title2="All Products" bottomSpace="pb-0" />
     <section className="products-area">
       <div className="container py-4">
@@ -63,7 +64,7 @@ const Products = () => {
           {products.map((product) => (
             <div className="product-card" key={product.id}>
               <img
-                src={`https://strapi-new-production-d256.up.railway.app${product.Image?.url}`}
+                src={`https://strapi-production-77e6.up.railway.app${product.Image?.url}`}
                 alt={product.Title}
               />
 

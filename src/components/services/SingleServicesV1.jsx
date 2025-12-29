@@ -1,12 +1,12 @@
 import React from "react";
 
 const SingleServicesV1 = ({ service }) => {
-  const { title, shortDescription } = service;
+  const { Title, ShortDescription } = service;
 
   return (
     <div className="services-carousel-caption">
-      <h2 className="services-title">{title}</h2>
-      <p className="services-description">{shortDescription}</p>
+      <h2 className="services-title">{Title}</h2>
+      <p className="services-description">{ShortDescription}</p>
     </div>
   );
 };

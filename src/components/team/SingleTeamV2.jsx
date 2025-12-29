@@ -8,7 +8,7 @@ const SingleTeamV2 = ({ team }) => {
     <div className="team-style-two">
       <div className="thumb">
         <img
-          src={`https://strapi-new-production-d256.up.railway.app${Photo?.url}`}
+          src={` https://strapi-production-77e6.up.railway.app${Photo?.url}`}
           alt={name}
         />
 

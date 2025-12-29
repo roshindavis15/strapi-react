@@ -11044,6 +11044,7 @@ color: #000;
 
 .profile-wrapper {
   position: relative;
+  
 }
 
 .profile-icon {
@@ -11085,4 +11086,53 @@ color: #000;
 .profile-dropdown a:hover,
 .profile-dropdown button:hover {
   background: #f5f5f5;
+}
+
+
+
+
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.profile-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.profile-body {
+  padding-top: 20px;
+}
+
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.profile-item span {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.profile-item strong {
+  font-weight: 500;
 }

@@ -21,7 +21,7 @@ const ContactForm = () => {
       setLoading(true);
 
       await axios.post(
-        "https://strapi-new-production-d256.up.railway.app/api/contacts",
+        "https://strapi-production-77e6.up.railway.app/api/contacts",
         {
           data: payload,
         }

@@ -15,7 +15,7 @@ const SingleTestimonialV2 = ({ testimonial }) => {
           <div className="thumb">
             {Photo?.url && (
               <img
-                src={`https://strapi-new-production-d256.up.railway.app${Photo.url}`}
+                src={` https://strapi-production-77e6.up.railway.app${Photo.url}`}
                 alt={name}
               />
             )}

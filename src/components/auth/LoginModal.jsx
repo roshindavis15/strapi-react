@@ -26,8 +26,8 @@ const AuthModal = ({ isOpen, onClose, onAuthSuccess }) => {
 
       const url =
         mode === "login"
-          ? "https://strapi-new-production-d256.up.railway.app/api/auth/local"
-          : "https://strapi-new-production-d256.up.railway.app/api/auth/local/register";
+          ? "https://strapi-production-77e6.up.railway.app/api/auth/local"
+          : "https://strapi-production-77e6.up.railway.app/api/auth/local/register";
 
       const payload =
         mode === "login"
@@ -48,7 +48,7 @@ const AuthModal = ({ isOpen, onClose, onAuthSuccess }) => {
 
       toast.success(
         mode === "login"
-          ? "Welcome back 👋"
+          ? "Welcome back "
           : "Account created successfully 🎉"
       );
 

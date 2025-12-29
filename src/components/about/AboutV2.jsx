@@ -23,7 +23,7 @@ const AboutV2 = ({ about }) => {
               <img
                 src={
                   HeroImage?.url
-                    ? `https://strapi-new-production-d256.up.railway.app${HeroImage.url}`
+                    ? `https://strapi-production-77e6.up.railway.app${HeroImage.url}`
                     : "/img/thumb/4.jpg"
                 }
                 alt={title}

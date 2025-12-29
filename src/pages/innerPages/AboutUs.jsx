@@ -7,13 +7,14 @@ import TestimonialV2 from '../../components/testimonial/TestimonialV2';
 import TeamV2 from '../../components/team/TeamV2';
 import FooterV1 from '../../components/footer/FooterV1';
 import axios from 'axios';
+import HeaderV1 from '../../components/header/HeaderV1';
 
 const AboutUs = () => {
      const [aboutData, setAboutData] = useState(null);
 
      useEffect(() => {
     axios
-      .get("https://strapi-new-production-d256.up.railway.app/api/about", {
+      .get("https://strapi-production-77e6.up.railway.app/api/about", {
         params: {
           populate: {
             HeroImage: true,
@@ -37,7 +38,7 @@ const AboutUs = () => {
 
     return (
         <>
-            <HeaderV5 />
+            <HeaderV1 />
             <BreadCrumb breadCrumb="about-us" title1="About Us" bottomSpace="pb-0" />
             <AboutV2 about={aboutData} />
             <WhyChooseUsV2 data={aboutData.whyChooseUs} />

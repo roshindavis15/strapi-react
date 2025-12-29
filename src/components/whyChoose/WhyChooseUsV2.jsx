@@ -63,7 +63,7 @@ const WhyChooseUsV2 = ({ data }) => {
               {/* HERO IMAGE */}
               {HeroImage?.url && (
                 <img
-                  src={`https://strapi-new-production-d256.up.railway.app${HeroImage.url}`}
+                  src={`https://strapi-production-77e6.up.railway.app${HeroImage.url}`}
                   alt="Why choose us"
                 />
               )}

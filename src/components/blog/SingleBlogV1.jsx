@@ -16,7 +16,7 @@ const SingleBlogV1 = ({ blog }) => {
 
   // Use Strapi media URL if thumb exists
   const thumbUrl = thumbnail?.url
-    ? `https://strapi-new-production-d256.up.railway.app${thumbnail.url}`
+    ? ` https://strapi-production-77e6.up.railway.app${thumbnail.url}`
     : "/img/blog/default.jpg"; // fallback image
 
   return (

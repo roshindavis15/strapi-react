@@ -4,6 +4,7 @@ import HeaderV5 from "../../components/header/HeaderV5";
 import BreadCrumb from "../../components/breadCrumb/BreadCrumb";
 import FooterV1 from "../../components/footer/FooterV1";
 import { Link } from "react-router-dom";
+import HeaderV1 from "../../components/header/HeaderV1";
 
 const News = () => {
   const [news, setNews] = useState([]);
@@ -13,7 +14,7 @@ const News = () => {
   }, []);
 
   const fetchNews = async () => {
-    const res = await axios.get("https://strapi-new-production-d256.up.railway.app/api/newsses", {
+    const res = await axios.get("https://strapi-production-77e6.up.railway.app/api/newsses", {
      
       params: {
         populate: {
@@ -30,7 +31,7 @@ const News = () => {
 
   return (
     <>
-      <HeaderV5 />
+      <HeaderV1 />
       <BreadCrumb
         breadCrumb="news"
         title1="Latest"
@@ -45,7 +46,7 @@ const News = () => {
               {/* IMAGE */}
               <div className="news-image">  
                 <img
-                  src={`https://strapi-new-production-d256.up.railway.app${item.Image?.url}`}
+                  src={`https://strapi-production-77e6.up.railway.app${item.Image?.url}`}
                   alt={item.title}
                 />
               </div>
